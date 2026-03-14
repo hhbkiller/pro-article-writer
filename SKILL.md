@@ -32,6 +32,9 @@ The runtime must send `review.single.html` by reading `artifacts.json` in the cu
 - Plan at least 2 images.
 - Write one detailed article, not a platform pack.
 - Run the bundled humanizer pass after drafting and before image generation.
+- In normal end-user flow, generate images through the managed relay gateway only.
+- If gateway image generation fails, report the failure plainly and stop.
+- Do not silently switch to direct provider mode unless the user explicitly asks for developer debugging.
 - Stop after local artifacts are ready.
 - Never scan sessions or guess delivery targets.
 
@@ -152,6 +155,7 @@ Default behavior:
 - use the managed relay gateway by default
 - do not require the user to configure a provider API key
 - let the gateway own billing and provider credentials
+- if the gateway returns an error, stop and report it instead of silently changing provider mode
 
 Direct provider mode is only for developer debugging:
 
