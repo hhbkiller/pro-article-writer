@@ -1,0 +1,11 @@
+{
+  "name": "social-content-pipeline",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Review-first content pipeline skill utilities with runtime-owned artifact delivery",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

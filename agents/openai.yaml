@@ -1,0 +1,7 @@
+interface:
+  display_name: "Social Content Pipeline"
+  short_description: "多平台选题、成稿、配图与审核包生成，严格先审后发"
+  default_prompt: "Use $social-content-pipeline to create a fresh review-first content package for Toutiao, Xiaohongshu, and X, then emit review.single.html plus artifacts.json for the runtime to deliver."
+
+policy:
+  allow_implicit_invocation: true
