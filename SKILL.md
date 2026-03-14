@@ -50,7 +50,7 @@ Generate the review package instead.
 ### 1. Create a fresh job
 
 ```bash
-node scripts/init-job.mjs --root ./jobs --theme "OpenClaw 风险通报" --direction "科技安全" --brief "写成有判断、有细节的深度图文"
+node scripts/init-job.mjs --root ./jobs --theme "用户指定主题" --direction "用户指定方向" --brief "用户给出的简要思路"
 ```
 
 This creates:

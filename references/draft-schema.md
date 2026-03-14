@@ -6,10 +6,10 @@ Use this schema for `jobs/<job-id>/draft.json`.
 
 ```json
 {
-  "jobId": "20260314-153000-openclaw",
-  "theme": "OpenClaw 风险通报",
-  "direction": "科技安全",
-  "brief": "做成有深度、有判断的专业图文",
+  "jobId": "20260314-153000-user-topic",
+  "theme": "用户指定主题",
+  "direction": "用户指定方向",
+  "brief": "用户给出的简要思路",
   "createdAt": "2026-03-14T07:30:00.000Z",
   "status": "draft",
   "approval": {
@@ -20,35 +20,35 @@ Use this schema for `jobs/<job-id>/draft.json`.
   },
   "research": {
     "userIntent": {
-      "topic": "OpenClaw 风险通报",
-      "direction": "科技安全",
-      "brief": "做成有深度、有判断的专业图文"
+      "topic": "用户指定主题",
+      "direction": "用户指定方向",
+      "brief": "用户给出的简要思路"
     },
     "searchQueries": [
-      "OpenClaw agent security latest analysis",
-      "OpenClaw risk report March 2026"
+      "用户主题 关键词 1",
+      "用户主题 关键词 2"
     ],
     "sources": [
       {
         "title": "Example source title",
         "url": "https://example.com/report",
         "publishedAt": "2026-03-13",
-        "note": "Provides the core incident facts and dates."
+        "note": "Explain exactly what this source contributes to the article."
       }
     ],
     "findings": [
-      "Finding 1",
-      "Finding 2"
+      "A concrete finding derived from the sources.",
+      "Another concrete finding derived from the sources."
     ]
   },
   "plan": {
-    "angle": "Explain why the risk matters now and where teams misjudge it.",
-    "audience": "产品负责人、技术负责人、对 AI 安全敏感的从业者",
-    "promise": "读完能理解事件、风险和实际动作建议",
+    "angle": "State the article's chosen angle based on the user's direction.",
+    "audience": "The intended reader group",
+    "promise": "What the reader should understand or gain after reading",
     "sections": [
       {
-        "heading": "发生了什么",
-        "purpose": "用最短篇幅建立事实和时间线",
+        "heading": "Section heading",
+        "purpose": "What this section is doing for the article",
         "keyPoints": [
           "Key point 1",
           "Key point 2"
@@ -57,27 +57,27 @@ Use this schema for `jobs/<job-id>/draft.json`.
     ],
     "imagePlan": [
       {
-        "key": "hero-scene",
+        "key": "image-1",
         "placement": "opening",
-        "purpose": "建立文章开场氛围",
+        "purpose": "What this image adds to the article",
         "prompt": "Prompt for image generation",
-        "alt": "封面图替代文本",
-        "caption": "封面图图注"
+        "alt": "Image alt text",
+        "caption": "Image caption"
       },
       {
-        "key": "risk-detail",
+        "key": "image-2",
         "placement": "middle",
-        "purpose": "支持核心风险段落",
+        "purpose": "What this image adds to the article",
         "prompt": "Second image prompt",
-        "alt": "第二张图替代文本",
-        "caption": "第二张图图注"
+        "alt": "Second image alt text",
+        "caption": "Second image caption"
       }
     ]
   },
   "article": {
-    "title": "文章标题",
-    "subtitle": "文章副标题",
-    "summary": "用 1-2 句话概括这篇文章的判断",
+    "title": "Article title",
+    "subtitle": "Article subtitle",
+    "summary": "Summarize the article's core judgment in 1-2 sentences",
     "humanizer": {
       "required": true,
       "source": "bundled-humanizer",
@@ -89,29 +89,29 @@ Use this schema for `jobs/<job-id>/draft.json`.
       ]
     },
     "blocks": [
-      { "type": "paragraph", "text": "开场段落" },
-      { "type": "image", "imageKey": "hero-scene", "caption": "封面图图注" },
-      { "type": "heading", "text": "小标题" },
-      { "type": "paragraph", "text": "正文段落" },
-      { "type": "image", "imageKey": "risk-detail", "caption": "第二张图图注" },
-      { "type": "list", "items": ["要点 1", "要点 2"] }
+      { "type": "paragraph", "text": "Opening paragraph" },
+      { "type": "image", "imageKey": "image-1", "caption": "Image caption" },
+      { "type": "heading", "text": "Section heading" },
+      { "type": "paragraph", "text": "Body paragraph" },
+      { "type": "image", "imageKey": "image-2", "caption": "Second image caption" },
+      { "type": "list", "items": ["Point 1", "Point 2"] }
     ],
     "images": [
       {
-        "key": "hero-scene",
+        "key": "image-1",
         "prompt": "Prompt for image generation",
-        "alt": "封面图替代文本",
-        "caption": "封面图图注",
+        "alt": "Image alt text",
+        "caption": "Image caption",
         "placement": "opening",
-        "purpose": "建立文章开场氛围"
+        "purpose": "What this image adds to the article"
       },
       {
-        "key": "risk-detail",
+        "key": "image-2",
         "prompt": "Second image prompt",
-        "alt": "第二张图替代文本",
-        "caption": "第二张图图注",
+        "alt": "Second image alt text",
+        "caption": "Second image caption",
         "placement": "middle",
-        "purpose": "支持核心风险段落"
+        "purpose": "What this image adds to the article"
       }
     ]
   },
